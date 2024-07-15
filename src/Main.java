@@ -9,6 +9,7 @@ public class Main extends PApplet {
     private int ringsNum = 12;
     private int rodsNum = 3;
     MoveManager moveManager;
+
     public static void main(String[] args) {
         PApplet.main("Main", args);
     }
@@ -30,6 +31,7 @@ public class Main extends PApplet {
 
     int start = millis();
     boolean autoSolve = false;
+
     public void draw() {
         background(51);
         toh.show();
@@ -42,7 +44,7 @@ public class Main extends PApplet {
         }
         textSize(30);
         fill(255);
-        text("Towers of Hanoi", width/2,50);
+        text("Towers of Hanoi", width / 2, 50);
         pushMatrix();
         fill(255);
         translate(width / 2, height - 120);
@@ -53,15 +55,15 @@ public class Main extends PApplet {
         popMatrix();
         textSize(20);
         fill(255);
-        text("Moves: " + step, width/2, 90);
+        text("Moves: " + step, width / 2, 90);
         textSize(15);
-        text("Optimum Moves: " + (int)pow(2, ringsNum), width/2, 110);
+        text("Optimum Moves: " + (int) pow(2, ringsNum), width / 2, 110);
     }
 
     TowerOfHanoi.Tower.Ring ringSnap;
 
     public void mousePressed() {
-        if(!autoSolve) {
+        if (!autoSolve) {
             TowerOfHanoi.Tower closestTower = toh.getClosestTower();
             if (closestTower != null) {
                 pick(closestTower);
@@ -71,7 +73,7 @@ public class Main extends PApplet {
     }
 
     public void mouseReleased() {
-        if(!autoSolve) {
+        if (!autoSolve) {
             TowerOfHanoi.Tower closestTower = toh.getClosestTower();
             put(closestTower);
         }
@@ -88,12 +90,13 @@ public class Main extends PApplet {
         toh.snapOrigin = tower;
     }
 
-    public void keyPressed(){
-        if(key == 'a' || key == 'b') {
+    public void keyPressed() {
+        if (key == 'a' || key == 'b') {
             reset();
         }
-        if(key == ' ')  autoSolve = !autoSolve;
-        if(keyCode == LEFT) moveManager.undo();
+        if (key == ' ') autoSolve = !autoSolve;
+        if(key == 'm') solve();
+        if (keyCode == LEFT) moveManager.undo();
     }
 
     void put(TowerOfHanoi.Tower tower) {
@@ -117,20 +120,21 @@ public class Main extends PApplet {
     int from = 0;
     int to = 0;
     long step = 0;
-    String seq = convert(0, 3);
-    String prevSeq = convert(0, 3);
-    void reset(){
+    String seq = convert(0, rodsNum - 1);
+    String prevSeq = convert(0, rodsNum - 1);
+
+    void reset() {
         step = 0;
         toh = new TowerOfHanoi(ringsNum);
     }
+
     void solve() {
         prevSeq = seq;
-        seq = convert(step, rodsNum-1);
-
+        seq = convert(step, rodsNum - 1);
+        println(seq + "           " + step);
         for (int i = 0; i < seq.length(); i++) {
             int state = Integer.valueOf(Character.toString(seq.charAt(i)));
             int prevState = Integer.valueOf(Character.toString(prevSeq.charAt(i)));
-
             if (prevState != state && state > 0) {
                 TowerOfHanoi.Tower towerA = toh.rings.get(i).tower;
                 pick(towerA);
@@ -138,7 +142,7 @@ public class Main extends PApplet {
             }
         }
 
-        step = (step + 1) % (int)pow(2, ringsNum);
+        step = (step + 1) % (int) pow(2, ringsNum);
     }
 
     TowerOfHanoi.Tower getLegalMove(TowerOfHanoi.Tower.Ring ringA) {
@@ -300,7 +304,7 @@ public class Main extends PApplet {
                     if (to != from) {
                         moveManager.push(ring.tower, this);
                         println("Moved! from " + from + " to " + to);
-                        step++;
+//                        step++;
                     }
                     ring.alignTo(this);
                     pile.push(ring);
@@ -376,16 +380,16 @@ public class Main extends PApplet {
     class MoveManager {
         LinkedList<Movement> moves;
 
-        MoveManager(){
+        MoveManager() {
             moves = new LinkedList<>();
         }
 
-        void push(TowerOfHanoi.Tower from, TowerOfHanoi.Tower to){
+        void push(TowerOfHanoi.Tower from, TowerOfHanoi.Tower to) {
             moves.add(0, new Movement(from, to));
         }
 
-        void undo(){
-            if(moves.size() > 0) {
+        void undo() {
+            if (moves.size() > 0) {
                 Movement move = moves.get(0);
                 moves.remove(0);
                 pick(move.to);

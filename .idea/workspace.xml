@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c81b2c-d59d-489e-abee-c0046978bc59" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="68c81b2c-d59d-489e-abee-c0046978bc59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/PApplet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/PApplet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$MoveManager$Movement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$MoveManager$Movement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$MoveManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$MoveManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$TowerOfHanoi$Tower$Ring.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$TowerOfHanoi$Tower$Ring.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$TowerOfHanoi$Tower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$TowerOfHanoi$Tower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$TowerOfHanoi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hanoy Tower/Main$TowerOfHanoi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hanoy Tower/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hanoy Tower/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +53,13 @@
       <find>20</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="99d7643a316c463805f7a14791277a85d82c6199" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -49,11 +67,18 @@
       </list>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="32" />
     <option name="width" value="1221" />
     <option name="height" value="631" />
   </component>
+  <component name="ProjectId" id="2jHaSkXqWMYNoR8jgH1eIdH63jp" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -74,25 +99,18 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Raw/processing-3.5.3/core/library/core.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -104,9 +122,11 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
